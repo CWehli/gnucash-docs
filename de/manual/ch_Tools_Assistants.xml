@@ -58,7 +58,7 @@
         beginnen.
         <tip>
           <para>Im Dialogtitel und in der ersten Zeile des <guilabel>Suchen</guilabel>-Dialogs wird ersichtlich,
-            welche Elemente mit der Suche gefunden werden.
+            welche Elemente mit der Suche gefunden werden können.
           </para>
         </tip>
       </para>
@@ -70,43 +70,58 @@
       <para>Die Funktion <guilabel>Buchungen suchen</guilabel> wird verwendet, um nach Buchungen in Ihrem
         aktuellen &app;-Buch zu suchen und die Ergebnisse in einer Registerkarte vom Typ
         <xref linkend="general-journal" /> anzuzeigen. Um den Dialog <guilabel>Buchungen
-        suchen</guilabel> zu nutzen, verwenden Sie im Menü den Eintrag &mc.ed.find;.
+        suchen</guilabel> aufzurufen, verwenden Sie im Menü den Eintrag &mc.ed.find;.
       </para>
 
-      <para>Wenn Sie den Dialog <guilabel>Buchungen suchen</guilabel> in der Registerkarte eines Kontos öffnen,
-        werden nur die zu diesem Konto zugehörigen Buchungsteile durchsucht, es sei denn, Sie
-        wählen als Suchkriterium <guilabel>Alle Konten</guilabel>.
-        <footnote id="fn_tools_all_accounts">
-          <para>Die Auswahl <guilabel>Alle Konten</guilabel> führt eine Suche durch, bei der Buchungen in den
-            Konten, die im Dialog <guilabel>Konten wählen</guilabel> markiert wurden, gefunden
-            werden, die mindestens einen Buchungsteil in jedem der ausgewählten Konten enthalten.
-            Wenn die Suche in einem regulären Kontobuch gestartet wird, ist dies das einzige
-            Kriterium, das Buchungsteile von anderen Konten prüft. Wenn Sie also den Dialog
-            <guilabel>Buchungen suchen</guilabel> z.B. in Aktiva:Umlaufvermögen:Girokonto öffnen
-            und alle Buchungen dieses Kontos mit einem Buchungsteil in Ausgaben:Lebensmittel finden
-            wollen, ist dies als Kriterium zu verwenden. Beachten Sie jedoch, dass es sich um eine
-            <emphasis>UND</emphasis>-Suche handelt: Wenn Sie zusätzlich auch nach
-            Ausgaben:Verschiedenes suchen, erhalten Sie <emphasis>nur</emphasis> die Buchungen mit
-            einem Buchungsteil in jedem der beiden Konten und <emphasis>nicht</emphasis> die
-            Buchungen mit nur einem einzigen Buchungsteil.
-          </para>
-        </footnote>
-        Möchten Sie stattdessen das gesamte &app;-Buch durchsuchen, dann starten Sie die Suche
-        entweder in der <emphasis>Kontenübersicht</emphasis>, oder Sie öffnen das
-        &mc.to.gen-jour;.
-      </para>
+      <para>Abhängig davon, wie tief Sie in Ihren Daten abtauchen wollen, können die folgenden
+        <emphasis>Ausgangssituationen</emphasis> unterschieden werden:
+        <variablelist>
+          <varlistentry>
+            <term>Ein einzelnes <emphasis>Konto</emphasis> durchsuchen</term>
 
-      <para>Bei den Buchungsfeldern werden nur die Buchungen berücksichtigt, die mit einem Buchungsteil in
-        diesem Register verknüpft sind, während bei den übrigen Buchungen nur die mit dem Konto
-        verbundenen Buchungsteile durchsucht werden, die diesem Konto zugeordnet sind, außer Sie
-        verwenden die Suchfunktion <guilabel>Alle Konten</guilabel>.
+            <listitem>
+              <para>Führen Sie die Suche in der Registerkarte eines Kontos durch, so werden nur die zu diesem Konto
+                zugehörigen Buchungsteile durchsucht. Möchten Sie doch eine Suche über mehrere
+                Konten durchführen, verwenden Sie als Suchkriterium <guilabel>Alle
+                Konten</guilabel>.
+                <footnote id="fn_tools_all_accounts">
+                  <para>Das Suchkriterium <guilabel>Alle Konten</guilabel> führt eine Suche durch, bei der Buchungen in den
+                    Konten, die im dem Dialog, nach Betätigen der Schaltfläche <guilabel>Konten
+                    wählen</guilabel>, markiert wurden, gefunden werden und mindestens einen
+                    Buchungsteil in jedem der ausgewählten Konten enthalten. Wenn die Suche in
+                    einem regulären Kontobuch gestartet wird, ist dies das einzige Kriterium, das
+                    Buchungsteile von anderen Konten prüft. Wenn Sie also den Dialog
+                    <guilabel>Buchungen suchen</guilabel> z.B. in Aktiva:Umlaufvermögen:Girokonto
+                    öffnen und alle Buchungen dieses Kontos mit einem Buchungsteil in
+                    Ausgaben:Lebensmittel finden wollen, ist dies als Kriterium zu verwenden.
+                    Beachten Sie jedoch, dass es sich um eine <emphasis>UND</emphasis>-Suche
+                    handelt: Wenn Sie zusätzlich auch nach Ausgaben:Verschiedenes suchen, erhalten
+                    Sie <emphasis>nur</emphasis> die Buchungen mit einem Buchungsteil in jedem der
+                    beiden Konten und <emphasis>nicht</emphasis> die Buchungen mit nur einem
+                    einzigen Buchungsteil.
+                  </para>
+                </footnote>
+              </para>
+            </listitem>
+          </varlistentry>
+
+          <varlistentry>
+            <term>Das gesamte <emphasis>&appname;-Buch</emphasis> durchsuchen</term>
+
+            <listitem>
+              <para>Starten Sie die Suche entweder in der <emphasis>Kontenübersicht</emphasis>, oder in dem geöffneten
+                <xref linkend="general-journal" />, so wird die Suche über alle Konten ausgeführt.
+              </para>
+            </listitem>
+          </varlistentry>
+        </variablelist>
       </para>
 
       <para>Wenn Sie zuvor die Buchungen in einem Register mit &mc.vw.f-by; filtern, dann werden in diesem Konto
         nur die Buchungen durchsucht, die durch den Filter angezeigt werden. Suchen Sie in einem
         gefiltertem Kontobuch oder einem <xref linkend="general-journal" />, werden alle
-        Buchungsteile in allen zutreffenden Buchungen (im letzteren Fall diejenigen, im dem
-        geöffneten Register) durchsucht.
+        Buchungsteile in allen zutreffenden Buchungen –im letzteren Fall diejenigen, in dem
+        geöffneten Register– durchsucht.
       </para>
 
       <para>Der Dialog <guilabel>Buchungen suchen</guilabel> besteht aus zwei horizontalen Bereichen. Der obere
@@ -119,7 +134,7 @@
 
         <screenshot>
           <screeninfo>
-            1180x383x256
+            1168x445x256
           </screeninfo>
 
           <mediaobject>
@@ -151,7 +166,8 @@
           <glossentry>
             <glossterm>Nach Einträgen suchen, für die gilt…</glossterm>
             <glossdef>
-              <para><glosslist>
+              <para>
+                <glosslist>
                   <glossentry>
                     <glossterm>Alle Kriterien werden erfüllt</glossterm>
                     <glossdef>
@@ -364,7 +380,7 @@
         <title>Verwendbare Suchkriterien</title>
 
         <table pgwide="1" frame="topbot" id="tool-find-bttns">
-          <title>Schaltflächen für Suchkriterien - Buchungssteil suchen</title>
+          <title>Suchkriterien für: Buchungsteil</title>
 
           <tgroup cols="4" rowsep="1">
             <thead>
@@ -416,8 +432,8 @@
 
                   <para>Beschreibung, Bemerkung, Buchungstext
                     <footnote>
-                      <para>Sucht nach einem Begriff in den Feldern Beschreibung und Bemerkung und Buchungstext eines
-                        Buchungsteils.
+                      <para>Sucht gleichzeitig nach einem Begriff in den Feldern Beschreibung und Bemerkung der Buchung sowie in
+                        dem Buchungstext des Buchungsteils.
                       </para>
                     </footnote>
                   </para>
@@ -661,7 +677,7 @@
               </row>
 
               <row>
-                <entry morerows="1" valign="middle">
+                <entry morerows="4" valign="middle">
                   <para>Abgleichen
                     <footnote>
                       <para>Die Option <guilabel>Abgleichen</guilabel> wendet die ausgewählten Kriterien auf jede Zeile einer
@@ -676,36 +692,48 @@
                   </para>
                 </entry>
 
-                <entry valign="middle">
+                <entry morerows="4" valign="middle">
                   <para>ist
                   </para>
+
+                  <para>ist nicht
+                  </para>
                 </entry>
 
-                <entry morerows="1" valign="middle">
+                <entry>
                   <para>Unbestätigt
                   </para>
-
-                  <para>Bestätigt
-                  </para>
-
-                  <para>Abgeglichen
-                  </para>
-
-                  <para>Fixiert
-                  </para>
-
-                  <para>Storniert
-                  </para>
                 </entry>
 
-                <entry morerows="1" valign="middle">
+                <entry morerows="4" valign="middle">
                   <para></para>
                 </entry>
               </row>
 
               <row>
-                <entry valign="middle">
-                  <para>ist nicht
+                <entry>
+                  <para>Bestätigt
+                  </para>
+                </entry>
+              </row>
+              
+              <row>
+                <entry>
+                  <para>Abgeglichen
+                  </para>
+                </entry>
+              </row>
+
+              <row>
+                <entry>
+                  <para>Fixiert
+                  </para>
+                </entry>
+              </row>
+
+              <row>
+                <entry>
+                  <para>Storniert
                   </para>
                 </entry>
               </row>
