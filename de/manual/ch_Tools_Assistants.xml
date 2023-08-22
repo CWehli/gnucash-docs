@@ -67,62 +67,13 @@
     <sect2 id="tool-find-txn">
       <title>Suchen von Buchungen</title>
 
-      <para>Die Funktion <guilabel>Buchungen suchen</guilabel> wird verwendet, um nach Buchungen in Ihrem
-        aktuellen &app;-Buch zu suchen und die Ergebnisse in einer Registerkarte vom Typ
-        <xref linkend="general-journal" /> anzuzeigen. Um den Dialog <guilabel>Buchungen
-        suchen</guilabel> aufzurufen, verwenden Sie im Menü den Eintrag &mc.ed.find;.
-      </para>
-
-      <para>Abhängig davon, wie tief Sie in Ihren Daten abtauchen wollen, können die folgenden
-        <emphasis>Ausgangssituationen</emphasis> unterschieden werden:
-        <variablelist>
-          <varlistentry>
-            <term>Ein einzelnes <emphasis>Konto</emphasis> durchsuchen</term>
-
-            <listitem>
-              <para>Führen Sie die Suche in der Registerkarte eines Kontos durch, so werden nur die zu diesem Konto
-                zugehörigen Buchungsteile durchsucht. Möchten Sie doch eine Suche über mehrere
-                Konten durchführen, verwenden Sie als Suchkriterium <guilabel>Alle
-                Konten</guilabel>.
-                <footnote id="fn_tools_all_accounts">
-                  <para>Das Suchkriterium <guilabel>Alle Konten</guilabel> führt eine Suche durch, bei der Buchungen in den
-                    Konten, die im dem Dialog, nach Betätigen der Schaltfläche <guilabel>Konten
-                    wählen</guilabel>, markiert wurden, gefunden werden und mindestens einen
-                    Buchungsteil in jedem der ausgewählten Konten enthalten. Wenn die Suche in
-                    einem regulären Kontobuch gestartet wird, ist dies das einzige Kriterium, das
-                    Buchungsteile von anderen Konten prüft. Wenn Sie also den Dialog
-                    <guilabel>Buchungen suchen</guilabel> z.B. in Aktiva:Umlaufvermögen:Girokonto
-                    öffnen und alle Buchungen dieses Kontos mit einem Buchungsteil in
-                    Ausgaben:Lebensmittel finden wollen, ist dies als Kriterium zu verwenden.
-                    Beachten Sie jedoch, dass es sich um eine <emphasis>UND</emphasis>-Suche
-                    handelt: Wenn Sie zusätzlich auch nach Ausgaben:Verschiedenes suchen, erhalten
-                    Sie <emphasis>nur</emphasis> die Buchungen mit einem Buchungsteil in jedem der
-                    beiden Konten und <emphasis>nicht</emphasis> die Buchungen mit nur einem
-                    einzigen Buchungsteil.
-                  </para>
-                </footnote>
-              </para>
-            </listitem>
-          </varlistentry>
-
-          <varlistentry>
-            <term>Das gesamte <emphasis>&appname;-Buch</emphasis> durchsuchen</term>
-
-            <listitem>
-              <para>Starten Sie die Suche entweder in der <emphasis>Kontenübersicht</emphasis>, oder in dem geöffneten
-                <xref linkend="general-journal" />, so wird die Suche über alle Konten ausgeführt.
-              </para>
-            </listitem>
-          </varlistentry>
-        </variablelist>
-      </para>
-
-      <para>Wenn Sie zuvor die Buchungen in einem Register mit &mc.vw.f-by; filtern, dann werden in diesem Konto
-        nur die Buchungen durchsucht, die durch den Filter angezeigt werden. Suchen Sie in einem
-        gefiltertem Kontobuch oder einem <xref linkend="general-journal" />, werden alle
-        Buchungsteile in allen zutreffenden Buchungen –im letzteren Fall diejenigen, in dem
-        geöffneten Register– durchsucht.
-      </para>
+      <abstract>
+        <para>Die Funktion <guilabel>Buchungen suchen</guilabel> wird verwendet, um nach Buchungen in Ihrem
+          aktuellen &app;-Buch zu suchen und die Ergebnisse in einer Registerkarte vom Typ
+          <xref linkend="general-journal" /> anzuzeigen. Um den Dialog <guilabel>Buchungen
+          suchen</guilabel> aufzurufen, verwenden Sie im Menü den Eintrag &mc.ed.find;.
+        </para>
+      </abstract>
 
       <para>Der Dialog <guilabel>Buchungen suchen</guilabel> besteht aus zwei horizontalen Bereichen. Der obere
         Bereich beschreibt ein oder mehrere <guilabel>Suchkriterien</guilabel> und der untere
@@ -166,8 +117,7 @@
           <glossentry>
             <glossterm>Nach Einträgen suchen, für die gilt…</glossterm>
             <glossdef>
-              <para>
-                <glosslist>
+              <para><glosslist>
                   <glossentry>
                     <glossterm>Alle Kriterien werden erfüllt</glossterm>
                     <glossdef>
@@ -716,7 +666,7 @@
                   </para>
                 </entry>
               </row>
-              
+
               <row>
                 <entry>
                   <para>Abgeglichen
@@ -874,6 +824,62 @@
           / <guibutton>Abgeglichen</guibutton> und schließlich die Auswahl von <guilabel>Nach
           Einträgen suchen, für die gilt</guilabel>, <guibutton>irgendeines der Kriterien wird
           erfüllt</guibutton>. In beiden Fällen wird &app; genau die gleichen Buchungen anzeigen.
+        </para>
+      </sect3>
+
+      <sect3 id="tool-find-txn-result">
+        <title>Wirkung</title>
+
+        <para>Abhängig davon, wie tief Sie in Ihren Daten abtauchen wollen, können die folgenden
+          <emphasis>Ausgangssituationen</emphasis> unterschieden werden:
+          <variablelist>
+            <varlistentry>
+              <term>Ein einzelnes <emphasis>Konto</emphasis> durchsuchen</term>
+
+              <listitem>
+                <para>Führen Sie die Suche in der Registerkarte eines Kontos durch, so werden nur die zu diesem Konto
+                  zugehörigen Buchungsteile durchsucht. Möchten Sie doch eine Suche über mehrere
+                  Konten durchführen, verwenden Sie als Suchkriterium <guilabel>Alle
+                  Konten</guilabel>.
+                  <footnote id="fn_tools_all_accounts">
+                    <para>Das Suchkriterium <guilabel>Alle Konten</guilabel> führt eine Suche durch, bei der Buchungen in den
+                      Konten, die im dem Dialog, nach Betätigen der Schaltfläche <guilabel>Konten
+                      wählen</guilabel>, markiert wurden, gefunden werden und mindestens einen
+                      Buchungsteil in jedem der ausgewählten Konten enthalten. Wenn die Suche in
+                      einem regulären Kontobuch gestartet wird, ist dies das einzige Kriterium, das
+                      Buchungsteile von anderen Konten prüft. Wenn Sie also den Dialog
+                      <guilabel>Buchungen suchen</guilabel> z.B. in Aktiva:Umlaufvermögen:Girokonto
+                      öffnen und alle Buchungen dieses Kontos mit einem Buchungsteil in
+                      Ausgaben:Lebensmittel finden wollen, ist dies als Kriterium zu verwenden.
+                      Beachten Sie jedoch, dass es sich um eine <emphasis>UND</emphasis>-Suche
+                      handelt: Wenn Sie zusätzlich auch nach Ausgaben:Verschiedenes suchen,
+                      erhalten Sie <emphasis>nur</emphasis> die Buchungen mit einem Buchungsteil in
+                      jedem der beiden Konten und <emphasis>nicht</emphasis> die Buchungen mit nur
+                      einem einzigen Buchungsteil.
+                    </para>
+                  </footnote>
+                </para>
+              </listitem>
+            </varlistentry>
+
+            <varlistentry>
+              <term>Das gesamte <emphasis>&appname;-Buch</emphasis> durchsuchen</term>
+
+              <listitem>
+                <para>Starten Sie die Suche entweder in der <emphasis>Kontenübersicht</emphasis>, oder in dem geöffneten
+                  <xref linkend="general-journal" />, so wird die Suche über alle Konten
+                  ausgeführt.
+                </para>
+              </listitem>
+            </varlistentry>
+          </variablelist>
+        </para>
+
+        <para>Wenn Sie zuvor die Buchungen in einem Register mit &mc.vw.f-by; filtern, dann werden in diesem Konto
+          nur die Buchungen durchsucht, die durch den Filter angezeigt werden. Suchen Sie in einem
+          gefiltertem Kontobuch oder einem <xref linkend="general-journal" />, werden alle
+          Buchungsteile in allen zutreffenden Buchungen –im letzteren Fall diejenigen, in dem
+          geöffneten Register– durchsucht.
         </para>
       </sect3>
     </sect2>
